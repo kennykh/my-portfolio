@@ -148,6 +148,21 @@ section{padding:96px 56px;}
 .proj-intro-text h4{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.02rem;color:var(--blue-dd);margin-bottom:5px;letter-spacing:-.3px;}
 .proj-intro-text p{font-size:.86rem;color:var(--mid);line-height:1.68;}
 
+
+/* TREE NAV */
+.proj-tree{margin-bottom:36px;}
+.tree-platforms{display:flex;gap:16px;flex-wrap:wrap;}
+.tree-platform{position:relative;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:20px 24px;flex:1;min-width:200px;cursor:pointer;transition:all .25s;box-shadow:var(--sh);}
+.tree-platform.active{border-color:var(--blue);background:var(--blue-ll);box-shadow:var(--sh2);}
+.tree-platform.disabled{opacity:.5;cursor:not-allowed;}
+.tree-plat-ico{font-size:1.5rem;margin-bottom:8px;}
+.tree-plat-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;color:var(--text);margin-bottom:3px;}
+.tree-plat-sub{font-size:.76rem;color:var(--muted);}
+.soon-label{position:absolute;top:12px;right:12px;font-size:.68rem;font-weight:700;background:rgba(92,45,145,.1);color:var(--purple);padding:2px 9px;border-radius:5px;}
+.tree-connector{display:flex;flex-direction:column;align-items:flex-start;margin-top:0;}
+.tree-line-v{width:2px;height:20px;background:var(--blue);margin-left:32px;opacity:.35;}
+.tree-subnav{margin-top:0;}
+
 /* LIGHTBOX */
 .lb{display:none;position:fixed;inset:0;z-index:1000;background:rgba(6,14,28,.93);align-items:center;justify-content:center;flex-direction:column;padding:24px;backdrop-filter:blur(6px);}
 .lb.open{display:flex;}
@@ -235,7 +250,7 @@ footer a:hover{color:#fff;}
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-badge"><span class="badge-dot"></span>🇦🇺 Melbourne, Victoria — Available for Work</div>
+    <div class="hero-badge"><span class="badge-dot"></span>🇦🇺 Melbourne, Victoria</div>
     <h1 class="hero-name">Kenny<br><span class="hl">Khalid</span></h1>
     <div class="hero-pills">
       <span class="pill pill-blue">IT Support Analyst</span>
@@ -246,10 +261,20 @@ footer a:hover{color:#fff;}
       <a href="assets/Kenny_Khalid_IT_Cloud_Support.pdf" target="_blank" class="btn-o">Download CV ↗</a>
       <a href="#contact" class="btn-o">Get in Touch</a>
     </div>
+    <div style="margin-top:20px;">
+      <a href="https://github.com/kennykh" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#0c1726 0%,#1e2d44 100%);border:1px solid #2a3a52;border-radius:10px;padding:12px 20px;text-decoration:none;transition:all .25s;max-width:540px;" onmouseover="this.style.borderColor='#5fa3e8';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#2a3a52';this.style.transform=''">
+        <span style="font-size:1.35rem;flex-shrink:0;">🐙</span>
+        <div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.92rem;color:#f1f5f9;margin-bottom:3px;">github.com/kennykh</div>
+          <div style="font-size:.76rem;color:#94a3b8;line-height:1.5;">PowerShell scripting · IT support AI automation · CI/CD pipelines · Azure infrastructure</div>
+        </div>
+        <span style="margin-left:auto;color:#5fa3e8;font-size:1.1rem;flex-shrink:0;padding-left:10px;">↗</span>
+      </a>
+    </div>
   </div>
   <div class="hero-side">
     <div class="side-card"><span class="side-ico">☁️</span><div><div class="side-lbl">Certified</div><div class="side-val">MS-900 · AZ-900</div></div></div>
-    <div class="side-card"><span class="side-ico">📋</span><div><div class="side-lbl">In Progress</div><div class="side-val">ITIL 5 · AZ-104</div></div></div>
+    <div class="side-card"><span class="side-ico">📋</span><div><div class="side-lbl">In Progress</div><div class="side-val">AZ-104 · SC-900</div></div></div>
     <div class="side-card"><span class="side-ico">🛡️</span><div><div class="side-lbl">Work Rights</div><div class="side-val">AU Permanent Resident</div></div></div>
   </div>
 </section>
@@ -262,8 +287,9 @@ footer a:hover{color:#fff;}
   <div class="certs-grid">
     <div class="cert-card"><div class="cert-ico" style="background:rgba(0,102,204,.08);">☁️</div><div><div class="cert-name">MS-900: Microsoft 365 Fundamentals</div><div class="cert-st ok">✓ Certified</div></div></div>
     <div class="cert-card"><div class="cert-ico" style="background:rgba(92,45,145,.08);">🔷</div><div><div class="cert-name">AZ-900: Azure Fundamentals</div><div class="cert-st ok">✓ Certified</div></div></div>
-    <div class="cert-card"><div class="cert-ico" style="background:rgba(10,138,10,.08);">📋</div><div><div class="cert-name">ITIL 5 Foundation</div><div class="cert-st ok">✓ Certified</div></div></div>
+    <div class="cert-card"><div class="cert-ico" style="background:rgba(10,138,10,.08);">📋</div><div><div class="cert-name">ITIL 4 Foundation (v5)</div><div class="cert-st ok">✓ Certified</div></div></div>
     <div class="cert-card"><div class="cert-ico" style="background:rgba(216,59,1,.08);">🔧</div><div><div class="cert-name">AZ-104: Azure Administrator</div><div class="cert-st wip">⏳ In Progress</div></div></div>
+    <div class="cert-card"><div class="cert-ico" style="background:rgba(92,45,145,.08);">🧪</div><div><div class="cert-name">ACA-910: Atlassian Agile Project Management</div><div class="cert-st ok">✓ Certified</div></div></div>
   </div>
 </section>
 
@@ -322,20 +348,47 @@ footer a:hover{color:#fff;}
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="sec-tag">My Work</div>
-  <h2 class="sec-title">Projects</h2>
-  <p class="sec-sub">Documented implementations across Microsoft 365, Exchange Online, Azure, and Defender platforms.</p>
+  <div class="sec-tag">See My Work</div>
+  <h2 class="sec-title">Portfolio</h2>
+  <p class="sec-sub">Hands-on implementations across Microsoft 365, Azure, and enterprise platforms — documented with live tenant screenshots.</p>
 
-  <div class="proj-subnav">
-    <button class="proj-subtab on" onclick="switchProj('intune',this)">🔒 Intune</button>
-    <button class="proj-subtab" onclick="switchProj('entra',this)">🪪 Entra ID</button>
-    <button class="proj-subtab" onclick="switchProj('exchange',this)">📧 Exchange</button>
-    <button class="proj-subtab" onclick="switchProj('defender',this)">🛡️ Defender</button>
-    <button class="proj-subtab soon">🔷 Azure &nbsp;<span style="font-size:.7rem;background:rgba(92,45,145,.12);color:var(--purple);padding:2px 8px;border-radius:4px;font-weight:700;">Soon</span></button>
+  <!-- TREE NAV -->
+  <div class="proj-tree">
+    <!-- Platform row -->
+    <div class="tree-platforms">
+      <div class="tree-platform active" id="plt-m365" onclick="selectPlatform('m365',this)">
+        <div class="tree-plat-ico">☁️</div>
+        <div class="tree-plat-name">Microsoft 365</div>
+        <div class="tree-plat-sub">Exchange · Entra ID · Intune · Defender</div>
+      </div>
+      <div class="tree-platform disabled" id="plt-azure">
+        <div class="tree-plat-ico">🔷</div>
+        <div class="tree-plat-name">Microsoft Azure</div>
+        <div class="tree-plat-sub">Coming soon</div>
+        <span class="soon-label">Soon</span>
+      </div>
+      <div class="tree-platform disabled" id="plt-d365">
+        <div class="tree-plat-ico">📊</div>
+        <div class="tree-plat-name">Dynamics 365</div>
+        <div class="tree-plat-sub">Coming soon</div>
+        <span class="soon-label">Soon</span>
+      </div>
+    </div>
+
+    <!-- M365 service tabs (shown when M365 selected) -->
+    <div class="tree-connector" id="tree-connector-m365">
+      <div class="tree-line-v"></div>
+      <div class="proj-subnav tree-subnav">
+        <button class="proj-subtab on" onclick="switchProj('entra',this)">🪪 Entra ID</button>
+        <button class="proj-subtab" onclick="switchProj('intune',this)">🔒 Intune</button>
+        <button class="proj-subtab" onclick="switchProj('exchange',this)">📧 Exchange</button>
+        <button class="proj-subtab" onclick="switchProj('defender',this)">🛡️ Defender</button>
+      </div>
+    </div>
   </div>
 
   <!-- INTUNE TAB -->
-  <div class="tab-pane on" id="tab-intune">
+  <div class="tab-pane" id="tab-intune">
     <div class="proj-intro">
       <div class="proj-intro-icon">🔒</div>
       <div class="proj-intro-text">
@@ -364,7 +417,7 @@ footer a:hover{color:#fff;}
   </div>
 
   <!-- ENTRA TAB -->
-  <div class="tab-pane" id="tab-entra">
+  <div class="tab-pane on" id="tab-entra">
     <div class="proj-intro">
       <div class="proj-intro-icon">🪪</div>
       <div class="proj-intro-text">
@@ -422,6 +475,25 @@ footer a:hover{color:#fff;}
       <div class="gal-card" onclick="lbOpen(9,'entra')">
         <div class="gal-img-wrap"><img src="assets/Entra_License_Management.jpg" alt="Microsoft 365 E5 License Management"><div class="gal-zoom-hint"><span class="gal-zoom-pill">🔍 Click to expand</span></div></div>
         <div class="gal-body"><div class="gal-tag">M365 Admin · Licensing · E5</div><div class="gal-title">Microsoft 365 E5 — License Assignment</div><div class="gal-desc">The <strong>Microsoft 365 E5</strong> licensing page in the M365 Admin Center showing <strong>5 of 25 licences assigned</strong>, with group-based assignment to the <strong>Finance</strong> group plus direct assignments to individual users. Demonstrates hybrid licensing strategy and license-consumption visibility.</div></div>
+
+      <div class="gal-card" onclick="lbOpen(10,'entra')">
+        <div class="gal-img-wrap"><img src="assets/Entra_User_list.jpg" alt="Entra ID All Users"><div class="gal-zoom-hint"><span class="gal-zoom-pill">🔍 Click to expand</span></div></div>
+        <div class="gal-body"><div class="gal-tag">Entra ID · Users · Directory</div><div class="gal-title">All Users — Full Tenant Directory</div><div class="gal-desc">The <strong>Users</strong> blade for <strong>MBK505.com</strong> listing all 7 provisioned user accounts: ABC, Finance Support, John - Finance, Kenny Khalid ×2, Support and Test 4435 — all Member type. Demonstrates structured identity provisioning covering dedicated service accounts, department users and shared identities across the kennyk.online domain.</div></div>
+      </div>
+
+      <div class="gal-card" onclick="lbOpen(11,'entra')">
+        <div class="gal-img-wrap"><img src="assets/Entra_Main_User_Overview.jpg" alt="Entra User Profile Overview"><div class="gal-zoom-hint"><span class="gal-zoom-pill">🔍 Click to expand</span></div></div>
+        <div class="gal-body"><div class="gal-tag">Entra ID · Users · Profile</div><div class="gal-title">User Profile — Kenny Khalid (contact@kennyk.online)</div><div class="gal-desc">The Entra ID user profile for <strong>Kenny Khalid</strong> (<strong>contact@kennyk.online</strong>) showing full identity attributes: Object ID, UPN, created date, User type (Member), and identity source (<strong>MBK505com.onmicrosoft.com</strong>). The profile blade also exposes direct access to Audit logs, Sign-in logs, Assigned roles, Administrative units, Groups, Devices, Licences and Authentication methods — the complete user management surface.</div></div>
+      </div>
+
+      <div class="gal-card" onclick="lbOpen(12,'entra')">
+        <div class="gal-img-wrap"><img src="assets/Entra_Sign_in_logs.jpg" alt="Entra Sign-in Events Log"><div class="gal-zoom-hint"><span class="gal-zoom-pill">🔍 Click to expand</span></div></div>
+        <div class="gal-body"><div class="gal-tag">Entra ID · Monitoring · Sign-in Logs</div><div class="gal-title">Sign-in Events — Interactive User Sign-ins</div><div class="gal-desc">The <strong>Monitoring &amp; health &rsaquo; Sign-in logs</strong> view showing real-time interactive sign-in events for <strong>kenny@kennyk.online</strong> across Azure Portal and Office 365 Shell, all with <strong>Success</strong> status. The log provides complete forensic data including Request ID, User Principal Name, Application name and UTC timestamp — essential for troubleshooting authentication failures and detecting anomalous access patterns.</div></div>
+      </div>
+
+      <div class="gal-card" onclick="lbOpen(13,'entra')">
+        <div class="gal-img-wrap"><img src="assets/Entra_Roles_and_Admins.jpg" alt="Entra Roles and Administrators"><div class="gal-zoom-hint"><span class="gal-zoom-pill">🔍 Click to expand</span></div></div>
+        <div class="gal-body"><div class="gal-tag">Entra ID · Roles · RBAC</div><div class="gal-title">Roles &amp; Administrators — Global Administrator</div><div class="gal-desc">The <strong>Roles and administrators &rsaquo; All roles</strong> page confirming the logged-in user holds <strong>Global Administrator and 1 other role</strong> on the MBK505.com tenant. The full built-in role catalogue is visible including Privileged roles (Application Administrator, AI Administrator) — demonstrating deep familiarity with Entra ID RBAC, Privileged Identity Management (PIM), and the principle of least-privilege role assignment.</div></div>
       </div>
 
     </div>
@@ -561,8 +633,8 @@ footer a:hover{color:#fff;}
 </section>
 
 <footer>
-  <div>© 2025 <span>Kenny Khalid</span> · IT Support Analyst · Melbourne, VIC 🇦🇺</div>
-  <div class="fr">kennyk.online · MS-900 · AZ-900 · ITIL 5 · <a href="https://github.com/kennykh" target="_blank">github.com/kennykh</a></div>
+  <div>© 2026 <span>Kenny Khalid</span> · Melbourne, VIC 🇦🇺</div>
+  <div class="fr">kennyk.online</div>
 </footer>
 
 <!-- LIGHTBOX -->
@@ -586,6 +658,10 @@ function switchProj(id,btn){
   document.getElementById('tab-'+id).classList.add('on');
   btn.classList.add('on');
 }
+function selectPlatform(id,el){
+  document.querySelectorAll('.tree-platform').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+}
 
 const GALLERIES={
   intune:[
@@ -604,7 +680,11 @@ const GALLERIES={
     {src:'assets/Entra_Conditional_Acces_Policies.jpg',cap:'Entra ID — Conditional Access policy console (Zero Trust)'},
     {src:'assets/Entra_Authentication_Methods.jpg',cap:'Entra ID — Authentication methods policy (phishing-resistant MFA)'},
     {src:'assets/Entra_Audit_Logs.jpg',cap:'Entra ID — Audit logs capturing directory activity'},
-    {src:'assets/Entra_License_Management.jpg',cap:'M365 Admin — Microsoft 365 E5 license assignment (5/25)'}
+    {src:'assets/Entra_License_Management.jpg',cap:'M365 Admin — Microsoft 365 E5 license assignment (5/25)'},
+    {src:'assets/Entra_User_list.jpg',cap:'Entra ID — All 7 provisioned users in the MBK505.com tenant'},
+    {src:'assets/Entra_Main_User_Overview.jpg',cap:'Entra ID — Kenny Khalid user profile (contact@kennyk.online)'},
+    {src:'assets/Entra_Sign_in_logs.jpg',cap:'Entra ID — Sign-in events log (interactive, all Success)'},
+    {src:'assets/Entra_Roles_and_Admins.jpg',cap:'Entra ID — Roles & Administrators — Global Administrator + 1 other role'}
   ],
   exchange:[
     {src:'assets/Exchange Mailbox.jpg',cap:'Exchange Admin Center — Manage Mailboxes (kennyk.online tenant)'},
