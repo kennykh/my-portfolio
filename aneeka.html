@@ -3,18 +3,59 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Pink Nursery Atelier — Executive Concepts for a Baby Girl</title>
+<title>Pink Nursery Atelier — Executive Concepts for Aneeka</title>
 <meta name="description" content="Four high-end, hand-crafted pink nursery concepts: Hello Kitty Atelier, Princess Carriage Royale, Iridescent Unicorn, and Ballerina Swan Lake." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#fff7f9; --ink:#3a1f2b; --muted:#7a5666; --accent:#d4a259; --line:#f1d6df;
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
-  header.hero{padding:80px 24px 56px;text-align:center;background:linear-gradient(180deg,#fbe4ea,#fff7f9)}
+  header.hero{padding:80px 24px 64px;text-align:center;background:linear-gradient(180deg,#fbe4ea,#fff7f9);overflow:hidden}
   header.hero p.eyebrow{letter-spacing:.35em;text-transform:uppercase;font-size:12px;color:var(--accent);margin:0 0 12px;font-family:Helvetica,Arial,sans-serif}
   header.hero h1{font-size:clamp(34px,5vw,56px);margin:0 0 16px;font-weight:400}
   header.hero p.lead{max-width:680px;margin:0 auto;color:var(--muted);font-size:18px}
+
+  /* Fancy "A gift for Aneeka" line */
+  .dedication{
+    margin:8px auto 28px;font-family:"Cormorant Garamond",Georgia,serif;
+    font-style:italic;font-size:clamp(20px,2.4vw,26px);color:#5a3445;
+    display:inline-flex;align-items:baseline;gap:.45em;
+  }
+  .dedication .name{
+    font-family:"Parisienne",cursive;font-style:normal;
+    font-size:1.9em;line-height:1;
+    background:linear-gradient(120deg,#e94f8a 0%,#d4a259 35%,#f6c66b 55%,#d4a259 70%,#e94f8a 100%);
+    background-size:200% auto;-webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+    animation:shimmer 4.5s linear infinite;
+    text-shadow:0 1px 0 rgba(255,255,255,.4);
+    position:relative;padding:0 .12em;
+  }
+  .dedication .name::after{
+    content:"✦";position:absolute;top:-.15em;right:-.55em;font-size:.45em;
+    color:#d4a259;animation:twinkle 2.2s ease-in-out infinite;
+  }
+  .dedication .name::before{
+    content:"✧";position:absolute;bottom:-.05em;left:-.55em;font-size:.4em;
+    color:#e94f8a;animation:twinkle 2.6s ease-in-out infinite .6s;
+  }
+  @keyframes shimmer{
+    0%{background-position:0% 50%}
+    100%{background-position:200% 50%}
+  }
+  @keyframes twinkle{
+    0%,100%{opacity:.2;transform:scale(.7) rotate(0deg)}
+    50%{opacity:1;transform:scale(1.2) rotate(20deg)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .dedication .name{animation:none}
+    .dedication .name::before,.dedication .name::after{animation:none;opacity:.8}
+  }
+
   main{max-width:1180px;margin:0 auto;padding:48px 24px 96px}
   .concept{margin:72px 0;border-top:1px solid var(--line);padding-top:56px}
   .concept:first-child{border-top:none;padding-top:0;margin-top:0}
@@ -41,6 +82,7 @@
 <body>
 <header class="hero">
   <p class="eyebrow">Bespoke Nursery Atelier</p>
+  <p class="dedication">A gift for <span class="name">Aneeka</span></p>
   <h1>Pink, Hand-Crafted, Heirloom</h1>
   <p class="lead">Four executive concepts for a baby girl's nursery — each a complete suite of cot, changing table, rolling trolley and matching armoire, designed to feel like couture pieces rather than furniture.</p>
 </header>
@@ -57,9 +99,9 @@ const concepts = [
     highlights:["Hand-carved solid beech, polished blush lacquer","Hand-tufted silk velvet headboard with gold-leaf trim","Embroidered Hello Kitty cameo, satin bow drawer pulls","Brass castors on trolley, soft-close drawers"],
     wardrobe:"A tall armoire echoing the cot: scalloped beech crown, gold-leaf scrollwork, mirrored centre panel with the embroidered Hello Kitty cameo, satin bow handles, and two soft-close lower drawers for keepsakes.",
     gallery:[
-      {src:"images/hellokitty-room.jpg",cap:"Full room — cot, changer, trolley & armoire"},
-      {src:"images/hellokitty-set.jpg",cap:"Cot, changing dresser & rolling trolley"},
-      {src:"images/hellokitty-wardrobe.jpg",cap:"Matching armoire with Hello Kitty cameo"},
+      {src:"assets/hellokitty-room.jpg",cap:"Full room — cot, changer, trolley & armoire"},
+      {src:"assets/hellokitty-set.jpg",cap:"Cot, changing dresser & rolling trolley"},
+      {src:"assets/hellokitty-wardrobe.jpg",cap:"Matching armoire with Hello Kitty cameo"},
     ],
   },
   {
@@ -69,9 +111,9 @@ const concepts = [
     highlights:["Carriage frame in iron with 22k gold-leaf finish","Silk tulle canopy with hand-stitched pearl trim","Swarovski crystal knobs on hutch and trolley","Convertible cot — becomes a toddler daybed"],
     wardrobe:"A carriage-shaped armoire on tiny gilded wheels — twin oval mirrored doors framed in 22k gold-leaf filigree, a jewelled tiara crest, and Swarovski crystal door pulls.",
     gallery:[
-      {src:"images/princess-room.jpg",cap:"Full room — carriage cot, hutch, trolley & carriage armoire"},
-      {src:"images/princess-set.jpg",cap:"Carriage cot, tiara hutch & crystal trolley"},
-      {src:"images/princess-wardrobe.jpg",cap:"Carriage-shaped armoire on gilded wheels"},
+      {src:"assets/princess-room.jpg",cap:"Full room — carriage cot, hutch, trolley & carriage armoire"},
+      {src:"assets/princess-set.jpg",cap:"Carriage cot, tiara hutch & crystal trolley"},
+      {src:"assets/princess-wardrobe.jpg",cap:"Carriage-shaped armoire on gilded wheels"},
     ],
   },
   {
@@ -81,9 +123,9 @@ const concepts = [
     highlights:["Full blush velvet upholstery, channel-tufted headboard","Mother-of-pearl horn with hidden soft night-light","Cloud-quilted dresser with marble effect panels","Polished rose-gold trolley, three tiers"],
     wardrobe:"A trio of arched doors fully upholstered in channel-tufted blush velvet, crowned with a mother-of-pearl unicorn horn finial, rose-gold fittings, and cedar-lined interior.",
     gallery:[
-      {src:"images/unicorn-room.jpg",cap:"Full room — velvet cot, dresser, trolley & arched armoire"},
-      {src:"images/unicorn-set.jpg",cap:"Velvet cot, cloud-quilted dresser & rose-gold trolley"},
-      {src:"images/unicorn-wardrobe.jpg",cap:"Velvet armoire with mother-of-pearl horn"},
+      {src:"assets/unicorn-room.jpg",cap:"Full room — velvet cot, dresser, trolley & arched armoire"},
+      {src:"assets/unicorn-set.jpg",cap:"Velvet cot, cloud-quilted dresser & rose-gold trolley"},
+      {src:"assets/unicorn-wardrobe.jpg",cap:"Velvet armoire with mother-of-pearl horn"},
     ],
   },
   {
@@ -93,9 +135,9 @@ const concepts = [
     highlights:["Sculpted swan headboard in cast resin, pearl finish","Crown canopy with double-layer silk tulle","Ballet-slipper cameos and ruffled tutu skirts","Bassinet-style rolling trolley in rose gold"],
     wardrobe:"An open-display armoire flanked by mirrored side wings, with twin sculpted swans on the crown, a tulle valance, ballet-slipper cameos, and a lower shoe shelf for first slippers.",
     gallery:[
-      {src:"images/ballerina-room.jpg",cap:"Full room — swan cot, tutu changer, bassinet trolley & swan armoire"},
-      {src:"images/ballerina-set.jpg",cap:"Swan cot, tutu changer & bassinet trolley"},
-      {src:"images/ballerina-wardrobe.jpg",cap:"Open swan armoire with mirrored wings"},
+      {src:"assets/ballerina-room.jpg",cap:"Full room — swan cot, tutu changer, bassinet trolley & swan armoire"},
+      {src:"assets/ballerina-set.jpg",cap:"Swan cot, tutu changer & bassinet trolley"},
+      {src:"assets/ballerina-wardrobe.jpg",cap:"Open swan armoire with mirrored wings"},
     ],
   },
 ];
