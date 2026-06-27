@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pink Nursery Atelier — Executive Concepts for a Baby Girl</title>
+<meta name="description" content="Four high-end, hand-crafted pink nursery concepts: Hello Kitty Atelier, Princess Carriage Royale, Iridescent Unicorn, and Ballerina Swan Lake." />
+<style>
+  :root{
+    --bg:#fff7f9; --ink:#3a1f2b; --muted:#7a5666; --accent:#d4a259; --line:#f1d6df;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
+  header.hero{padding:80px 24px 56px;text-align:center;background:linear-gradient(180deg,#fbe4ea,#fff7f9)}
+  header.hero p.eyebrow{letter-spacing:.35em;text-transform:uppercase;font-size:12px;color:var(--accent);margin:0 0 12px;font-family:Helvetica,Arial,sans-serif}
+  header.hero h1{font-size:clamp(34px,5vw,56px);margin:0 0 16px;font-weight:400}
+  header.hero p.lead{max-width:680px;margin:0 auto;color:var(--muted);font-size:18px}
+  main{max-width:1180px;margin:0 auto;padding:48px 24px 96px}
+  .concept{margin:72px 0;border-top:1px solid var(--line);padding-top:56px}
+  .concept:first-child{border-top:none;padding-top:0;margin-top:0}
+  .concept h2{font-size:clamp(28px,3.5vw,40px);margin:0 0 6px;font-weight:400}
+  .concept .tag{color:var(--accent);font-style:italic;margin:0 0 24px}
+  .concept .desc{font-size:17px;color:#4a2f3d;max-width:820px}
+  .palette{display:flex;gap:8px;margin:18px 0 28px}
+  .palette span{width:36px;height:36px;border-radius:50%;border:1px solid rgba(0,0,0,.06)}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:24px}
+  .gallery figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .gallery img{display:block;width:100%;height:auto}
+  .gallery figcaption{padding:12px 14px;font-size:13px;color:var(--muted);font-family:Helvetica,Arial,sans-serif}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:28px}
+  @media (max-width:720px){.twocol{grid-template-columns:1fr}}
+  .highlights{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+  .highlights h3{margin:0 0 10px;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-family:Helvetica,Arial,sans-serif;font-weight:600}
+  .highlights ul{margin:0;padding-left:18px}
+  .highlights li{margin:6px 0;color:#4a2f3d}
+  .wardrobe-note{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 22px;color:#4a2f3d}
+  .wardrobe-note h3{margin:0 0 10px;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-family:Helvetica,Arial,sans-serif;font-weight:600}
+  footer{text-align:center;padding:48px 24px;color:var(--muted);border-top:1px solid var(--line);font-size:14px;font-family:Helvetica,Arial,sans-serif}
+</style>
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Bespoke Nursery Atelier</p>
+  <h1>Pink, Hand-Crafted, Heirloom</h1>
+  <p class="lead">Four executive concepts for a baby girl's nursery — each a complete suite of cot, changing table, rolling trolley and matching armoire, designed to feel like couture pieces rather than furniture.</p>
+</header>
+<main id="concepts"></main>
+<footer>
+  Concepts crafted for inspiration. Comparable makers include Notte Fatata, AFK Furniture, Posh Tots and Bratt Décor.
+</footer>
+<script>
+const concepts = [
+  {
+    name:"Hello Kitty Atelier", tag:"Parisian couture meets Sanrio charm",
+    desc:"A hand-carved cot with tufted blush velvet headboard, gold-leaf scrollwork, and a delicate Hello Kitty cameo. The matching dresser-changer and rolling trolley carry the same atelier detailing — like a couture vanity reimagined for a nursery.",
+    palette:["#f6d2dc","#efb6c8","#d99cb1","#c9a36b"],
+    highlights:["Hand-carved solid beech, polished blush lacquer","Hand-tufted silk velvet headboard with gold-leaf trim","Embroidered Hello Kitty cameo, satin bow drawer pulls","Brass castors on trolley, soft-close drawers"],
+    wardrobe:"A tall armoire echoing the cot: scalloped beech crown, gold-leaf scrollwork, mirrored centre panel with the embroidered Hello Kitty cameo, satin bow handles, and two soft-close lower drawers for keepsakes.",
+    gallery:[
+      {src:"images/hellokitty-room.jpg",cap:"Full room — cot, changer, trolley & armoire"},
+      {src:"images/hellokitty-set.jpg",cap:"Cot, changing dresser & rolling trolley"},
+      {src:"images/hellokitty-wardrobe.jpg",cap:"Matching armoire with Hello Kitty cameo"},
+    ],
+  },
+  {
+    name:"Princess Carriage Royale", tag:"A fairytale heirloom, hand-gilded",
+    desc:"The signature piece is a carriage-shaped cot crowned with a gold filigree dome and tulle canopy. Paired with a tiara-crested changing hutch and a crystal-knobbed trolley, it's the kind of set that becomes a family heirloom.",
+    palette:["#fbe4ea","#f3c6d3","#d4a259","#b88842"],
+    highlights:["Carriage frame in iron with 22k gold-leaf finish","Silk tulle canopy with hand-stitched pearl trim","Swarovski crystal knobs on hutch and trolley","Convertible cot — becomes a toddler daybed"],
+    wardrobe:"A carriage-shaped armoire on tiny gilded wheels — twin oval mirrored doors framed in 22k gold-leaf filigree, a jewelled tiara crest, and Swarovski crystal door pulls.",
+    gallery:[
+      {src:"images/princess-room.jpg",cap:"Full room — carriage cot, hutch, trolley & carriage armoire"},
+      {src:"images/princess-set.jpg",cap:"Carriage cot, tiara hutch & crystal trolley"},
+      {src:"images/princess-wardrobe.jpg",cap:"Carriage-shaped armoire on gilded wheels"},
+    ],
+  },
+  {
+    name:"Iridescent Unicorn", tag:"Soft, modern, full of magic",
+    desc:"A fully upholstered cot with a scalloped headboard, iridescent horn, and tufted velvet ears. The cloud-quilted dresser and rose-gold trolley keep the look airy and contemporary — less ornate, more boutique hotel.",
+    palette:["#f7dbe3","#ecc2d2","#e6b8c6","#e3b48f"],
+    highlights:["Full blush velvet upholstery, channel-tufted headboard","Mother-of-pearl horn with hidden soft night-light","Cloud-quilted dresser with marble effect panels","Polished rose-gold trolley, three tiers"],
+    wardrobe:"A trio of arched doors fully upholstered in channel-tufted blush velvet, crowned with a mother-of-pearl unicorn horn finial, rose-gold fittings, and cedar-lined interior.",
+    gallery:[
+      {src:"images/unicorn-room.jpg",cap:"Full room — velvet cot, dresser, trolley & arched armoire"},
+      {src:"images/unicorn-set.jpg",cap:"Velvet cot, cloud-quilted dresser & rose-gold trolley"},
+      {src:"images/unicorn-wardrobe.jpg",cap:"Velvet armoire with mother-of-pearl horn"},
+    ],
+  },
+  {
+    name:"Ballerina Swan Lake", tag:"Quiet luxury, balletic grace",
+    desc:"Twin sculpted swans crown the cot beneath a regal tulle canopy. The changer wears a ruffled tutu skirt with ballet-slipper cameos, and the trolley is shaped like a tiny bassinet on rose-gold wheels — the most elegant of the four.",
+    palette:["#fcdfe4","#f4c1ce","#e9a8b8","#d99e7a"],
+    highlights:["Sculpted swan headboard in cast resin, pearl finish","Crown canopy with double-layer silk tulle","Ballet-slipper cameos and ruffled tutu skirts","Bassinet-style rolling trolley in rose gold"],
+    wardrobe:"An open-display armoire flanked by mirrored side wings, with twin sculpted swans on the crown, a tulle valance, ballet-slipper cameos, and a lower shoe shelf for first slippers.",
+    gallery:[
+      {src:"images/ballerina-room.jpg",cap:"Full room — swan cot, tutu changer, bassinet trolley & swan armoire"},
+      {src:"images/ballerina-set.jpg",cap:"Swan cot, tutu changer & bassinet trolley"},
+      {src:"images/ballerina-wardrobe.jpg",cap:"Open swan armoire with mirrored wings"},
+    ],
+  },
+];
+const esc = s => s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+document.getElementById("concepts").innerHTML = concepts.map(c => `
+  <section class="concept">
+    <h2>${esc(c.name)}</h2>
+    <p class="tag">${esc(c.tag)}</p>
+    <p class="desc">${esc(c.desc)}</p>
+    <div class="palette">${c.palette.map(p=>`<span style="background:${p}" title="${p}"></span>`).join("")}</div>
+    <div class="twocol">
+      <div class="highlights"><h3>Signature details</h3><ul>${c.highlights.map(h=>`<li>${esc(h)}</li>`).join("")}</ul></div>
+      <div class="wardrobe-note"><h3>Matching wardrobe</h3><p>${esc(c.wardrobe)}</p></div>
+    </div>
+    <div class="gallery">
+      ${c.gallery.map(g=>`<figure><img src="${g.src}" alt="${esc(g.cap)}" loading="lazy"/><figcaption>${esc(g.cap)}</figcaption></figure>`).join("")}
+    </div>
+  </section>
+`).join("");
+</script>
+</body>
+</html>
